@@ -11,7 +11,7 @@ const Post = ({ post }) => {
     ? post.frontmatter.author
     : meta_author;
   return (
-    <div className="post">
+    <div className="post shadow-lg shadow-orange-500/50 transition ease-in-out hover:scale-105 ">
       <div className="relative">
         {post.frontmatter.image && (
           <ImageFallback
@@ -25,7 +25,7 @@ const Post = ({ post }) => {
         <ul className="absolute left-2 top-3 flex flex-wrap items-center">
           {post.frontmatter.categories.map((tag, index) => (
             <li
-              className="mx-2 inline-flex h-7 rounded-[35px] bg-primary px-3 text-white"
+              className="mx-2 inline-flex h-7 rounded-[10px] bg-primary px-3 text-white"
               key={"tag-" + index}
             >
               <Link
@@ -38,37 +38,50 @@ const Post = ({ post }) => {
           ))}
         </ul>
       </div>
-
-      <h3 className="h5 mb-2 mt-4">
-        <Link
-          href={`/${blog_folder}/${post.slug}`}
-          className="block text-primary hover:text-rose-900"
-        >
-          {post.frontmatter.title}
-        </Link>
-      </h3>
-      <ul className="flex items-center space-x-4">
-        <li>
+      <div className="p-2">
+        <h3 className="h5 mb-2 mt-4 pl-2 ">
           <Link
-            className="inline-flex items-center font-secondary text-xs leading-3"
-            href="#"
+            href={`/${blog_folder}/${post.slug}`}
+            className="block text-primary hover:text-rose-900"
           >
-            <FaUserAlt className="mr-1.5" />
-            {author}
+            {post.frontmatter.title}
           </Link>
-        </li>
-        <li className="inline-flex items-center font-primary text-xs leading-3">
-          <FaRegCalendar className="mr-1.5" />
-          {dateFormat(post.frontmatter.date)}
-        </li>
-      </ul>
-      <p>{post.content.slice(0, Number(summary_length))}</p>
-      <Link
-        className="btn btn-outline-primary mt-4"
-        href={`/${blog_folder}/${post.slug}`}
-      >
-        {post.frontmatter.title.slice(0, 15)}
-      </Link>
+        </h3>
+        <div className="grid grid-cols-4 gap-4">
+          <p className="text-center"> النوع</p>
+          <p className="text-center"> المقاس</p>
+          <p className="text-center">الحالة </p>
+          <p className="text-center">مابعرف </p>
+        </div>
+        <div className="grid grid-cols-4 gap-4">
+          <p className="text-center">كريم مارفل </p>
+          <p className="text-center">202 </p>
+          <p className="text-center">تصميم </p>
+          <p className="text-center">نوع </p>
+        </div>
+        {/* <ul className="flex items-center space-x-4 ">
+          <li>
+            <Link
+              className="inline-flex items-center font-secondary text-xs leading-3"
+              href="#"
+            >
+              <FaUserAlt className="mr-1.5" />
+              {author}
+            </Link>
+          </li>
+          <li className="inline-flex items-center font-primary text-xs leading-3">
+            <FaRegCalendar className="mr-1.5" />
+            {dateFormat(post.frontmatter.date)}
+          </li>
+        </ul> */}
+        {/* <p className="pr-2">{post.content.slice(0, Number(summary_length))}</p> */}
+        <Link
+          className="btn btn-outline-primary mt-4  "
+          href={`/${blog_folder}/${post.slug}`}
+        >
+          {post.frontmatter.title.slice(0, 15)}
+        </Link>
+      </div>
     </div>
   );
 };

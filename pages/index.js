@@ -31,7 +31,7 @@ const Home = ({
   return (
     <Base>
       {/* Banner */}
-      <section className="section banner relative pb-60">
+      <section className="section banner relative pb-10">
         <ImageFallback
           className="absolute bottom-0 left-0 z-[-1] w-full"
           src={"/images/banner-bg-shape.svg"}
@@ -154,7 +154,7 @@ const Home = ({
               {recent_posts.enable && (
                 <div className="section pt-0">
                   {markdownify(recent_posts.title, "h2", "section-title")}
-                  <div className="rounded border border-border px-6 pt-6 dark:border-darkmode-border">
+                  <div className="rounded  dark:border-darkmode-border">
                     <div className="row">
                       {sortPostByDate.slice(0, showPosts).map((post) => (
                         <div className="mb-8 md:col-6" key={post.slug}>
