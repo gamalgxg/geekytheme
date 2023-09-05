@@ -137,7 +137,7 @@ const Header = () => {
             ) : (
               <svg
                 onClick={() => setShowMenu(!showMenu)}
-                className="z-5  h-4 w-4 fill-current"
+                className="z-5  h-4 w-4 fill-current "
                 viewBox="0 0 20 20"
               >
                 <title>فتح القائمة</title>

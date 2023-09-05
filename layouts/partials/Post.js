@@ -2,8 +2,8 @@ import config from "@config/config.json";
 import ImageFallback from "@layouts/components/ImageFallback";
 import dateFormat from "@lib/utils/dateFormat";
 import Link from "next/link";
-import { FaRegCalendar, FaUserAlt } from "react-icons/fa";
 
+import { IoSwapHorizontalSharp } from "react-icons/io5";
 const Post = ({ post }) => {
   const { summary_length, blog_folder } = config.settings;
   const { meta_author } = config.metadata;
@@ -49,15 +49,24 @@ const Post = ({ post }) => {
         </h3>
         <div className="grid grid-cols-4 gap-4">
           <p className="text-center"> النوع</p>
-          <p className="text-center"> المقاس</p>
+          <p className="text-center">
+            <div
+              className="search-icon"
+              onClick={() => {
+                setSearchModal(true);
+              }}
+            >
+              <IoSwapHorizontalSharp />
+            </div>
+          </p>
           <p className="text-center">الحالة </p>
           <p className="text-center">مابعرف </p>
         </div>
         <div className="grid grid-cols-4 gap-4">
-          <p className="text-center">كريم مارفل </p>
-          <p className="text-center">202 </p>
-          <p className="text-center">تصميم </p>
-          <p className="text-center">نوع </p>
+          <p className="text-center"> ({post.frontmatter.typeMarble}) </p>
+          <p className="text-center">({post.frontmatter.size}) سم </p>
+          <p className="text-center">({post.frontmatter.state}) </p>
+          <p className="text-center"> dsd</p>
         </div>
         {/* <ul className="flex items-center space-x-4 ">
           <li>
