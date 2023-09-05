@@ -11,8 +11,8 @@ const Post = ({ post }) => {
     ? post.frontmatter.author
     : meta_author;
   return (
-    <div className="post shadow-lg shadow-orange-500/50 transition duration-300 ease-in hover:scale-105 ">
-      <div className="relative">
+    <div className="post rounded-3xl shadow-lg shadow-orange-500/50 transition duration-300 ease-in hover:scale-105 ">
+      <div className="relative ">
         {post.frontmatter.image && (
           <ImageFallback
             className="rounded"
@@ -74,7 +74,9 @@ const Post = ({ post }) => {
             {dateFormat(post.frontmatter.date)}
           </li>
         </ul> */}
-        {/* <p className="pr-2">{post.content.slice(0, Number(summary_length))}</p> */}
+        <p className="pr-2 pt-2">
+          {post.content.slice(0, Number(summary_length))}
+        </p>
         <Link
           className="btn btn-outline-primary mt-4  "
           href={`/${blog_folder}/${post.slug}`}
