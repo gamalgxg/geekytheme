@@ -108,7 +108,7 @@ const Home = ({
                             >
                               {post.frontmatter.image && (
                                 <ImageFallback
-                                  className="mr-3 h-[85px] rounded object-cover"
+                                  className="mr-3 h-[85px] rounded object-cover pl-2"
                                   src={post.frontmatter.image}
                                   alt={post.frontmatter.title}
                                   width={105}
@@ -139,9 +139,9 @@ const Home = ({
 
               {/* Promotion */}
               {promotion.enable && (
-                <Link href={promotion.link} className="section block pt-0">
+                <Link href={promotion.link} className="section block  pt-0">
                   <ImageFallback
-                    className="h-full w-full"
+                    className="h-full w-full rounded"
                     height="115"
                     width="800"
                     src={promotion.image}

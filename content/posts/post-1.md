@@ -1,7 +1,11 @@
 ---
-title: "مغسلة رخام كريم مارفل"
+title: "مغاسل رخام مودرن 2023"
 date: 2022-04-04T01:00:00Z
 image: /images/post/post-1.png
+image1: /images/post/post-1.png
+image2: /images/post/post-1.png
+image3: /images/post/post-1.png
+image4: /images/post/post-1.png
 categories: ["مغاسل رخام فخمه"]
 featured: true
 draft: false

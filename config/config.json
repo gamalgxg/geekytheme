@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "Geeky Nextjs",
+    "title": "باجكو",
     "base_url": "/",
     "favicon": "/images/favicon.png",
     "logo": "/images/bajco_black.png",
@@ -22,8 +22,8 @@
   },
   "params": {
     "tag_manager_id": "",
-    "footer_content": "Lorem ipsum dolor sit amt, conse adip iscing. donec iaculis tempasus laoreet. Libero ullam rgscper.",
-    "copyright": "Designed and Developed By [Statichunt](https://statichunt.com/)"
+    "footer_content": "للديكورات والمغاسل الرخامية, تصميم وتنفيذ",
+    "copyright": "تصميم باجكو"
   },
   "metadata": {
     "meta_author": "Statichunt",

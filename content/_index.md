@@ -17,7 +17,7 @@ featured_posts:
 
 promotion:
   enable: true
-  image: /images/promotion.png
+  image: /images/1.jpg
   link: "#"
 
 recent_posts:
