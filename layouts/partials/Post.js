@@ -11,7 +11,7 @@ const Post = ({ post }) => {
     ? post.frontmatter.author
     : meta_author;
   return (
-    <div className="post shadow-lg shadow-orange-500/50 transition ease-in-out hover:scale-105 ">
+    <div className="post shadow-lg shadow-orange-500/50 transition duration-300 ease-in hover:scale-105 ">
       <div className="relative">
         {post.frontmatter.image && (
           <ImageFallback
