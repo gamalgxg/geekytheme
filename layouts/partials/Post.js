@@ -38,6 +38,7 @@ const Post = ({ post }) => {
           ))}
         </ul>
       </div>
+
       <h3 className="h5 mb-2 mt-4">
         <Link
           href={`/${blog_folder}/${post.slug}`}

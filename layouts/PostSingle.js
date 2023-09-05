@@ -70,7 +70,7 @@ const PostSingle = ({
                   </ul>
                 </div>{" "}
                 <div className="relative pt-2">
-                  {image && (
+                  {image1 && (
                     <Image
                       src={image1}
                       height="500"
@@ -81,7 +81,7 @@ const PostSingle = ({
                   )}
                 </div>
                 <div className="relative pt-2">
-                  {image && (
+                  {image2 && (
                     <Image
                       src={image2}
                       height="500"

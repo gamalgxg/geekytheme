@@ -30,7 +30,7 @@ const Header = () => {
   }, [showMenu]);
 
   return (
-    <header className="header ">
+    <header className="header">
       <nav className="navbar container  px-1 sm:px-8">
         <div className="order-0">
           <Logo />
@@ -55,7 +55,7 @@ const Header = () => {
             </button>
             <ul
               id="nav-menu"
-              className="navbar-nav w-full md:w-auto md:space-x-1 lg:flex xl:space-x-2"
+              className="navbar-nav flex w-full flex-col items-center md:w-auto md:space-x-1 lg:flex xl:space-x-2"
             >
               {main.map((menu, i) => (
                 <React.Fragment key={`menu-${i}`}>
@@ -124,10 +124,10 @@ const Header = () => {
           </div>
           <button
             onClick={() => setShowMenu(!showMenu)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white lg:hidden"
+            className=" inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white lg:hidden "
           >
             {showMenu ? (
-              <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20">
+              <svg className=" h-4 w-4 fill-current" viewBox="0 0 20 20">
                 <title>اغلاق القائمة</title>
                 <polygon
                   points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
@@ -135,7 +135,11 @@ const Header = () => {
                 />
               </svg>
             ) : (
-              <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20">
+              <svg
+                onClick={() => setShowMenu(!showMenu)}
+                className="z-5  h-4 w-4 fill-current"
+                viewBox="0 0 20 20"
+              >
                 <title>فتح القائمة</title>
                 <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z" />
               </svg>
