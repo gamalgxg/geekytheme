@@ -24,7 +24,8 @@ const PostSingle = ({
   allCategories,
   relatedPosts,
 }) => {
-  let { description, title, date, image, categories } = frontmatter;
+  let { description, title, date, image, image1, image2, categories } =
+    frontmatter;
   description = description ? description : content.slice(0, 120);
 
   const { theme } = useTheme();
@@ -71,7 +72,7 @@ const PostSingle = ({
                 <div className="relative pt-2">
                   {image && (
                     <Image
-                      src={image}
+                      src={image1}
                       height="500"
                       width="1000"
                       alt={title}
@@ -82,7 +83,7 @@ const PostSingle = ({
                 <div className="relative pt-2">
                   {image && (
                     <Image
-                      src={image}
+                      src={image2}
                       height="500"
                       width="1000"
                       alt={title}
@@ -97,20 +98,21 @@ const PostSingle = ({
                 )}
                 {markdownify(title, "h1", "lg:text-[42px] mt-4")}
                 <ul className="flex items-center space-x-4">
-                  <li>
+                  <li className="flex items-center ">
+                    <FaUserAlt className="mr-1.5 font-secondary text-xs leading-3" />
                     <Link
-                      className="inline-flex items-center font-secondary text-xs leading-3"
+                      className="font-secondary text-xs leading-3"
                       href="/about"
                     >
-                      <FaUserAlt className="mr-1.5" />
                       {author}
                     </Link>
                   </li>
-                  <li className="inline-flex items-center font-secondary text-xs leading-3">
+                  <li className="flex items-center font-secondary text-xs leading-3">
                     <FaRegCalendar className="mr-1.5" />
-                    {dateFormat(date)}
+                    <p>{dateFormat(date)}</p>
                   </li>
                 </ul>
+                {/* محتوى المقالة */}
                 <div className="content mb-16">
                   <MDXRemote {...mdxContent} components={shortcodes} />
                 </div>

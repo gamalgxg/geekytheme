@@ -10,7 +10,7 @@
     },
     {
       "name": "صفحة",
-      "url": "/elements"
+      "url": "/#"
     },
     {
       "name": "اتصل بنا",
@@ -40,10 +40,6 @@
     {
       "name": "اتصل بنا",
       "url": "/contact"
-    },
-    {
-      "name": "Privacy Policy",
-      "url": "#"
     }
   ]
 }

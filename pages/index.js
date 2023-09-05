@@ -31,7 +31,7 @@ const Home = ({
   return (
     <Base>
       {/* Banner */}
-      <section className="section banner relative pb-0">
+      <section className="section banner relative pb-60">
         <ImageFallback
           className="absolute bottom-0 left-0 z-[-1] w-full"
           src={"/images/banner-bg-shape.svg"}
@@ -65,7 +65,7 @@ const Home = ({
                 </Link>
               )}
             </div>
-            {banner.image_enable && (
+            {/* {banner.image_enable && (
               <div className="col-9 lg:col-6">
                 <ImageFallback
                   className="mx-auto object-contain"
@@ -76,7 +76,7 @@ const Home = ({
                   alt="Banner Image"
                 />
               </div>
-            )}
+            )} */}
           </div>
         </div>
       </section>
