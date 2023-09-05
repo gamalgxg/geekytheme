@@ -52,7 +52,7 @@ const PostSingle = ({
                       className="rounded-lg"
                     />
                   )}
-                  <ul className="absolute top-3 left-2 flex flex-wrap items-center">
+                  <ul className="absolute left-2 top-3 flex flex-wrap items-center">
                     {categories.map((tag, index) => (
                       <li
                         className="mx-2 inline-flex h-7 rounded-[35px] bg-primary px-3 text-white"
@@ -67,6 +67,28 @@ const PostSingle = ({
                       </li>
                     ))}
                   </ul>
+                </div>{" "}
+                <div className="relative pt-2">
+                  {image && (
+                    <Image
+                      src={image}
+                      height="500"
+                      width="1000"
+                      alt={title}
+                      className="rounded-lg"
+                    />
+                  )}
+                </div>
+                <div className="relative pt-2">
+                  {image && (
+                    <Image
+                      src={image}
+                      height="500"
+                      width="1000"
+                      alt={title}
+                      className="rounded-lg"
+                    />
+                  )}
                 </div>
                 {config.settings.InnerPaginationOptions.enableTop && (
                   <div className="mt-4">
@@ -96,6 +118,8 @@ const PostSingle = ({
                   <InnerPagination posts={posts} date={date} />
                 )}
               </article>
+
+              {/* commints */}
               <div className="mt-16">
                 {disqus.enable && (
                   <DiscussionEmbed
@@ -115,7 +139,7 @@ const PostSingle = ({
 
         {/* Related posts */}
         <div className="container mt-20">
-          <h2 className="section-title">Related Posts</h2>
+          <h2 className="section-title">مغاسل اخرى</h2>
           <div className="row mt-16">
             {relatedPosts.slice(0, 3).map((post, index) => (
               <div key={"post-" + index} className="mb-12 lg:col-4">

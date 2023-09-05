@@ -1,19 +1,19 @@
 ---
 banner:
-  title: Welcome **!**
-  title_small: "to John Bravo's Blog"
-  content: Are Developer and recently started your own business Already made website to ensure presence wants to develop.
+  title: باجكو **!**
+  title_small: "تصميم وتفصيل مغاسل رخام فخمه"
+  content: ديكورات ومغاسل رخام فخمه حسب التصميم المطلوب مع الخشب والمرايا.
   image_enable: true
-  image: /images/banner-author.png
+  image: /images/مغاسل_رخام.jpg
   button:
     enable: true
-    label: Know About Me
+    label: شاهد المزيد..
     link: /about
     rel: ""
 
 featured_posts:
   enable: true
-  title: Featured Posts
+  title: مغاسل الرخام
 
 promotion:
   enable: true
@@ -23,5 +23,4 @@ promotion:
 recent_posts:
   title: Recent Posts
   enable: true
-
 ---

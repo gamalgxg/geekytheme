@@ -30,8 +30,8 @@ const Header = () => {
   }, [showMenu]);
 
   return (
-    <header className="header">
-      <nav className="navbar container px-1 sm:px-8">
+    <header className="header ">
+      <nav className="navbar container  px-1 sm:px-8">
         <div className="order-0">
           <Logo />
         </div>
@@ -149,7 +149,7 @@ const Header = () => {
         />
       </nav>
       {showMenu && (
-        <div className="header-backdrop absolute top-0 left-0 h-[100vh] w-full bg-black/50 lg:hidden"></div>
+        <div className="header-backdrop absolute left-0 top-0 h-[100vh] w-full bg-black/50 lg:hidden"></div>
       )}
     </header>
   );
