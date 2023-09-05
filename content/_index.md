@@ -8,7 +8,7 @@ banner:
   button:
     enable: true
     label: شاهد المزيد..
-    link: /about
+    link: /posts
     rel: ""
 
 featured_posts:
