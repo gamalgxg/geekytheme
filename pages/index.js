@@ -111,7 +111,7 @@ const Home = ({
                                   className="mr-3 h-[85px] rounded object-cover pl-2"
                                   src={post.frontmatter.image}
                                   alt={post.frontmatter.title}
-                                  width={200}
+                                  width={100}
                                   height={85}
                                 />
                               )}
