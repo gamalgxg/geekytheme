@@ -73,7 +73,7 @@ const Sidebar = ({ posts, categories, className }) => {
                     fill="#2ba283"
                   />
                 </svg>
-                <Link className="py-2" href={`/categories/${category.name}`}>
+                <Link className="py-2 " href={`/categories/${category.name}`}>
                   {category.name.replace("-", " ")}
                   <span className="absolute right-0 top-1/2 -translate-y-1/2 text-[10px] text-gray-500">
                     {category.posts}
@@ -131,7 +131,7 @@ const Sidebar = ({ posts, categories, className }) => {
                       <h3 className="h5 mb-2">
                         <Link
                           href={`/${blog_folder}/${post.slug}`}
-                          className="block hover:text-primary"
+                          className="block text-primary hover:text-rose-900"
                         >
                           {post.frontmatter.title}
                         </Link>

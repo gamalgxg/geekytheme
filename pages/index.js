@@ -111,7 +111,7 @@ const Home = ({
                                   className="mr-3 h-[85px] rounded object-cover pl-2"
                                   src={post.frontmatter.image}
                                   alt={post.frontmatter.title}
-                                  width={105}
+                                  width={200}
                                   height={85}
                                 />
                               )}
@@ -119,7 +119,7 @@ const Home = ({
                                 <h3 className="h5 mb-2">
                                   <Link
                                     href={`/${blog_folder}/${post.slug}`}
-                                    className="block hover:text-primary"
+                                    className="block text-primary hover:text-rose-900"
                                   >
                                     {post.frontmatter.title}
                                   </Link>

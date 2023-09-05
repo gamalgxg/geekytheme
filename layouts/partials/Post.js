@@ -29,7 +29,7 @@ const Post = ({ post }) => {
               key={"tag-" + index}
             >
               <Link
-                className="capitalize"
+                className="capitalize "
                 href={`/categories/${tag.replace(" ", "-")}`}
               >
                 {tag}
@@ -41,7 +41,7 @@ const Post = ({ post }) => {
       <h3 className="h5 mb-2 mt-4">
         <Link
           href={`/${blog_folder}/${post.slug}`}
-          className="block hover:text-primary"
+          className="block text-primary hover:text-rose-900"
         >
           {post.frontmatter.title}
         </Link>
@@ -50,13 +50,13 @@ const Post = ({ post }) => {
         <li>
           <Link
             className="inline-flex items-center font-secondary text-xs leading-3"
-            href="/about"
+            href="#"
           >
             <FaUserAlt className="mr-1.5" />
             {author}
           </Link>
         </li>
-        <li className="inline-flex items-center font-secondary text-xs leading-3">
+        <li className="inline-flex items-center font-primary text-xs leading-3">
           <FaRegCalendar className="mr-1.5" />
           {dateFormat(post.frontmatter.date)}
         </li>
@@ -66,7 +66,7 @@ const Post = ({ post }) => {
         className="btn btn-outline-primary mt-4"
         href={`/${blog_folder}/${post.slug}`}
       >
-        Read More
+        {post.frontmatter.title.slice(0, 15)}
       </Link>
     </div>
   );
