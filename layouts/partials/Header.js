@@ -55,7 +55,7 @@ const Header = () => {
             </button>
             <ul
               id="nav-menu"
-              className="navbar-nav flex w-full flex-col items-center md:w-auto md:space-x-1 lg:flex xl:space-x-2"
+              className="navbar-nav w-full md:w-auto md:space-x-1 lg:flex xl:space-x-2"
             >
               {main.map((menu, i) => (
                 <React.Fragment key={`menu-${i}`}>
