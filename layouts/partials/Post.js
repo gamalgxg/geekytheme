@@ -2,8 +2,8 @@ import config from "@config/config.json";
 import ImageFallback from "@layouts/components/ImageFallback";
 import dateFormat from "@lib/utils/dateFormat";
 import Link from "next/link";
-
-import { IoSwapHorizontalSharp } from "react-icons/io5";
+import { FaRegCalendar, FaUserAlt } from "react-icons/fa";
+import { FaGithubAlt } from "react-icons/fa6";
 const Post = ({ post }) => {
   const { summary_length, blog_folder } = config.settings;
   const { meta_author } = config.metadata;
@@ -15,7 +15,7 @@ const Post = ({ post }) => {
       <div className="relative ">
         {post.frontmatter.image && (
           <ImageFallback
-            className="rounded"
+            className="rounded "
             src={post.frontmatter.image}
             alt={post.frontmatter.title}
             width={405}
@@ -49,24 +49,15 @@ const Post = ({ post }) => {
         </h3>
         <div className="grid grid-cols-4 gap-4">
           <p className="text-center"> النوع</p>
-          <p className="text-center">
-            <div
-              className="search-icon"
-              onClick={() => {
-                setSearchModal(true);
-              }}
-            >
-              <IoSwapHorizontalSharp />
-            </div>
-          </p>
+          <p className="text-center">المقاس</p>
           <p className="text-center">الحالة </p>
-          <p className="text-center">مابعرف </p>
+          <p className="text-center">اللون </p>
         </div>
         <div className="grid grid-cols-4 gap-4">
           <p className="text-center"> ({post.frontmatter.typeMarble}) </p>
           <p className="text-center">({post.frontmatter.size}) سم </p>
           <p className="text-center">({post.frontmatter.state}) </p>
-          <p className="text-center"> dsd</p>
+          <p className="text-center"> ({post.frontmatter.color})</p>
         </div>
         {/* <ul className="flex items-center space-x-4 ">
           <li>
@@ -83,14 +74,12 @@ const Post = ({ post }) => {
             {dateFormat(post.frontmatter.date)}
           </li>
         </ul> */}
-        <p className="pr-2 pt-2">
-          {post.content.slice(0, Number(summary_length))}
-        </p>
+        <p className="pr-2 pt-2">{post.content.slice(0, 100)}....</p>
         <Link
           className="btn btn-outline-primary mt-4  "
           href={`/${blog_folder}/${post.slug}`}
         >
-          {post.frontmatter.title.slice(0, 15)}
+          {post.frontmatter.title.slice(0, 15)}....
         </Link>
       </div>
     </div>

@@ -30,6 +30,7 @@ import {
   IoLogoYoutube,
   IoMail,
   IoLogoStackoverflow,
+  IoStarSharp,
 } from "react-icons/io5";
 
 const Social = ({ source, className }) => {
@@ -65,9 +66,15 @@ const Social = ({ source, className }) => {
     address,
     skype,
     website,
+    star,
   } = source;
   return (
     <ul className={className}>
+      {star && (
+        <li className="inline-block">
+          <IoStarSharp />
+        </li>
+      )}
       {facebook && (
         <li className="inline-block">
           <a
